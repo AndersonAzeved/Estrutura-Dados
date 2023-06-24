@@ -1,0 +1,8 @@
+Para executar o código, é preciso estar na pasta fontes.
+
+Neste código, o distribution possui apenas um caso.
+Para executar, digite o comando abaixo no prompt de comandos
+
+gcc -c -Wall distribution/distribution-sort.c ; gcc distribution/distribution-sort.c -o distribution-sort ; ./distribution/distribution-sort <VALOR>
+
+VALOR = Números de elementos do vetor

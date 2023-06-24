@@ -1,0 +1,8 @@
+Para executar o código, é preciso estar na pasta fontes.
+
+Neste código, o selection possui um caso.
+Segue abaixo cada comando para ser executado no prompt de comandos
+
+gcc -c -Wall selection/selection-sort.c; gcc selection/selection-sort.c -o selection/selection-sort;./selection/selection-sort <VALOR>
+
+VALOR = Números de elementos do vetor

@@ -1,0 +1,9 @@
+100 34801.9 696.038 50781 28251 50 iterates/insertion/insertion-50-100.txt
+200 133146 2662.92 225951 109562 50 iterates/insertion/insertion-50-200.txt
+300 281497 5629.94 501224 229424 50 iterates/insertion/insertion-50-300.txt
+400 377430 7548.6 485724 360081 50 iterates/insertion/insertion-50-400.txt
+500 597630 11952.6 731822 544296 50 iterates/insertion/insertion-50-500.txt
+600 824292 16485.8 943280 1032869 50 iterates/insertion/insertion-50-600.txt
+700 1.18604e+06 23720.8 1916930 1000602 50 iterates/insertion/insertion-50-700.txt
+800 1.64388e+06 32877.6 2618232 1348025 50 iterates/insertion/insertion-50-800.txt
+900 1.99523e+06 39904.6 3576315 1682448 50 iterates/insertion/insertion-50-900.txt

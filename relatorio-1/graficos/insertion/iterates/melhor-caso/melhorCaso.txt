@@ -1,0 +1,9 @@
+100 1047.12 20.9424 995 1000 50 iterates/melhor-caso/melhorCaso-50-100.txt
+200 1943.46 38.8692 2406 1541 50 iterates/melhor-caso/melhorCaso-50-200.txt
+300 2511.54 50.2308 3330 2133 50 iterates/melhor-caso/melhorCaso-50-300.txt
+400 2836.96 56.7392 3596 2601 50 iterates/melhor-caso/melhorCaso-50-400.txt
+500 3349.18 66.9836 4007 3204 50 iterates/melhor-caso/melhorCaso-50-500.txt
+600 3947.92 78.9584 5016 3773 50 iterates/melhor-caso/melhorCaso-50-600.txt
+700 4486.76 89.7352 5058 4355 50 iterates/melhor-caso/melhorCaso-50-700.txt
+800 5057.86 101.157 5166 4967 50 iterates/melhor-caso/melhorCaso-50-800.txt
+900 6630.1 132.602 9708 11357 50 iterates/melhor-caso/melhorCaso-50-900.txt

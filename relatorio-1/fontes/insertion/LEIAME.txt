@@ -1,0 +1,16 @@
+Para executar o código, é preciso estar na pasta fontes.
+
+Neste código, o insertion possui três casos.
+Segue abaixo cada comando para ser executado no prompt de comandos
+
+TEMPO ESPERADO:
+gcc -c -Wall insertion/insertion-sort.c; gcc insertion/insertion-sort.c -o insertion/insertion-sort;./insertion/insertion-sort <VALOR>
+
+MELHOR CASO: 
+gcc -c -Wall insertion/ins_melhor.c; gcc insertion/ins_melhor.c -o insertion/ins_melhor;./insertion/ins_melhor <VALOR>
+
+PIOR CASO:
+gcc -c -Wall insertion/ins_pior.c; gcc insertion/ins_pior.c -o insertion/ins_pior;./insertion/ins_pior <VALOR>
+
+
+VALOR = Números de elementos do vetor

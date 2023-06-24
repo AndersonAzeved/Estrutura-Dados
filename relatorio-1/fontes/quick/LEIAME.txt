@@ -1,0 +1,14 @@
+Para executar o código, é preciso estar na pasta fontes.
+
+Neste código, o quick possui dois casos.
+Segue abaixo cada comando para ser executado no prompt de comandos
+
+TEMPO ESPERADO:
+gcc -c -Wall quick/quick-sort.c; gcc quick/quick-sort.c -o quick/quick-sort;./quick/quick-sort <VALOR>
+
+
+PIOR CASO:
+gcc -c -Wall quick/quick-pior.c; gcc quick/quick-pior.c -o quick/quick-pior;./quick/quick-pior <VALOR>
+
+
+VALOR = Números de elementos do vetor

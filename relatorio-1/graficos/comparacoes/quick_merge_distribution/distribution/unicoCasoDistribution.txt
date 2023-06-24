@@ -1,0 +1,9 @@
+100 25674.5 855.817 31621 22560 30 iterates/unicoCasoDistribution-30-100.txt
+200 28022.9 934.097 34641 23486 30 iterates/unicoCasoDistribution-30-200.txt
+300 30364.9 1012.16 81664 26190 30 iterates/unicoCasoDistribution-30-300.txt
+400 32296.8 1076.56 65486 28517 30 iterates/unicoCasoDistribution-30-400.txt
+500 32856.8 1095.23 38973 31118 30 iterates/unicoCasoDistribution-30-500.txt
+600 34875.8 1162.53 38441 32305 30 iterates/unicoCasoDistribution-30-600.txt
+700 36876.3 1229.21 41991 34562 30 iterates/unicoCasoDistribution-30-700.txt
+800 39088.3 1302.94 45722 37150 30 iterates/unicoCasoDistribution-30-800.txt
+900 42689.6 1422.99 55806 40015 30 iterates/unicoCasoDistribution-30-900.txt

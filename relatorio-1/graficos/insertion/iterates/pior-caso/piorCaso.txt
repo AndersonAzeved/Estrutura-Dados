@@ -1,0 +1,9 @@
+100 62975.6 1259.51 95308 54040 50 iterates/pior-caso/piorCaso-50-100.txt
+200 233353 4667.06 361070 195480 50 iterates/pior-caso/piorCaso-50-200.txt
+300 432930 8658.6 751113 386799 50 iterates/pior-caso/piorCaso-50-300.txt
+400 836002 16720 954502 1082847 50 iterates/pior-caso/piorCaso-50-400.txt
+500 1.15919e+06 23183.8 1360378 1069923 50 iterates/pior-caso/piorCaso-50-500.txt
+600 1.75475e+06 35095 3144609 1509217 50 iterates/pior-caso/piorCaso-50-600.txt
+700 2.53245e+06 50649 3790488 2071019 50 iterates/pior-caso/piorCaso-50-700.txt
+800 3.2034e+06 64068 5107427 2713763 50 iterates/pior-caso/piorCaso-50-800.txt
+900 3.73959e+06 74791.8 5862955 3389265 50 iterates/pior-caso/piorCaso-50-900.txt

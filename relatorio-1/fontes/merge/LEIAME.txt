@@ -1,0 +1,8 @@
+Para executar o código, é preciso estar na pasta fontes.
+
+Neste código, o merge possui apenas um caso.
+Para executar, digite o comando abaixo no prompt de comandos
+
+gcc -c -Wall merge/merge-sort.c ; gcc merge/merge-sort.c -o merge-sort ; ./merge/merge-sort <VALOR>
+
+VALOR = Números de elementos do vetor
