@@ -66,7 +66,6 @@ struct tree_node *leftRightRotate(struct tree_node *x){
 }
 
 
-
 void tree_insert(struct tree_node **r, struct tree_node *w){ // Inserindo a direita ou esquerda
     if((*r) == NULL){
         (*r) = w;
@@ -103,8 +102,6 @@ struct tree_node *balance(struct tree_node *w){
     
     return w;
 }
-
-
 
 
 void tree_print(struct tree_node *r){ // Imprimir a árvore
@@ -188,8 +185,3 @@ int main(int argc, char **argv){
 
     return 0;
 }
-
-
-
-
-// gcc -Wall tree_avl.c; gcc tree_avl.c -o tree_avl; ./tree_avl > tree_avl.dot; dot -Tpng tree_avl.dot -o tree_avl.png

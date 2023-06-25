@@ -1,0 +1,9 @@
+100 234.97 2.3497 359 199 100 iterates/tree_avl-100-100.txt
+200 235.4 2.354 338 206 100 iterates/tree_avl-100-200.txt
+300 235.77 2.3577 305 197 100 iterates/tree_avl-100-300.txt
+400 275.15 2.7515 335 243 100 iterates/tree_avl-100-400.txt
+500 269.11 2.6911 373 237 100 iterates/tree_avl-100-500.txt
+600 295.36 2.9536 462 257 100 iterates/tree_avl-100-600.txt
+700 282.57 2.8257 334 245 100 iterates/tree_avl-100-700.txt
+800 281.4 2.814 333 237 100 iterates/tree_avl-100-800.txt
+900 256.03 2.5603 314 222 100 iterates/tree_avl-100-900.txt
