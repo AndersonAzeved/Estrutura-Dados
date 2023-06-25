@@ -1,0 +1,5 @@
+../iterate.sh 100 100 100 900 ./tree iterates/tree
+
+gcc -Wall tree.c; gcc tree.c -o tree; ./tree 
+
+gcc -Wall tree.c; gcc tree.c -o tree; ./tree > tree.dot; dot -Tpng tree.dot -o tree.png

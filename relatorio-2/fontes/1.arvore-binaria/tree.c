@@ -75,35 +75,28 @@ struct tree_node *search(struct tree_node *r, int v){
 
 int main(int argc, char **argv){
     struct tree_node *root = NULL;
-    
-    unsigned int i;
-    int n = 15;
+    struct timespec a, b;
+    unsigned int t, n;
+    int i, *v;
 
+    n = atoi(argv[1]);
+    v = (int *) malloc(n * sizeof(int));
     srand(time(NULL));
-
-    for(i = 0; i < n; i++){
+    for(i = 0; i < n; i++)
         tree_insert(&root, tree_new(rand()));
-    }
+        //tree_insert(&root, tree_new(i));
+    
+    clock_gettime(CLOCK_MONOTONIC, &b);
+    search(root, rand());
+    //search(root, 0);
+    clock_gettime(CLOCK_MONOTONIC, &a);
 
+    t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
 
-    // Testando manualmente
-    /*printf("Valor da Raiz\n");
-    printf("%d\n\n", root->value);
-    tree_print(root);
-    struct tree_node *r = NULL;
-    r = (struct tree_node *) malloc(sizeof(struct tree_node));
-    r = search(root,15);
-    if(r == NULL)
-        printf("\n\nNULL\n\n");
-    else
-        printf("\n\nBusca Encontrada: %d\n\n", r->value);*/
+    printf("%u\n", t);
 
+    free(v);
 
-
-    //  Jeito certo
-    tree_print_dot(root);
-
-     
     return 0;
 }
 
