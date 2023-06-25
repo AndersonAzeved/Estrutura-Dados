@@ -171,10 +171,12 @@ int main(int argc, char **argv){
     v = (int *) malloc(n * sizeof(int));
     srand(time(NULL));
     for(i = 0; i < n; i++)
-        tree_insert(&root, tree_new(rand()));
+        //tree_insert(&root, tree_new(rand()));
+        tree_insert(&root, tree_new(i));
     
     clock_gettime(CLOCK_MONOTONIC, &b);
-    search(root, rand());
+    //search(root, rand());
+    search(root, 0);
     clock_gettime(CLOCK_MONOTONIC, &a);
 
     t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
