@@ -166,20 +166,30 @@ struct tree_node *search(struct tree_node *r, int v){
 
 int main(int argc, char **argv){
     struct tree_node *root = NULL;
-    
-    unsigned int i;
-    int n = 15;
+    struct timespec a, b;
+    unsigned int t, n;
+    int i, *v;
 
+    n = atoi(argv[1]);
+    v = (int *) malloc(n * sizeof(int));
     srand(time(NULL));
-    
-    for(i = 0; i < n; i++){
+    for(i = 0; i < n; i++)
         tree_insert(&root, tree_new(rand()));
-    }
+    
+    clock_gettime(CLOCK_MONOTONIC, &b);
+    search(root, rand());
+    clock_gettime(CLOCK_MONOTONIC, &a);
 
-    tree_print_dot(root);
- 
+    t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
+
+    printf("%u\n", t);
+
+    free(v);
+
     return 0;
 }
+
+
 
 
 // gcc -Wall tree_avl.c; gcc tree_avl.c -o tree_avl; ./tree_avl > tree_avl.dot; dot -Tpng tree_avl.dot -o tree_avl.png
