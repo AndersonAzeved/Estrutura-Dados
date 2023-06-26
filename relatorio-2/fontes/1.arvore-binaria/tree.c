@@ -84,17 +84,17 @@ int main(int argc, char **argv){
     srand(time(NULL));
 
     // Tempo esperado - Ordem e busca aleatória
-    //for(i = 0; i < n; i++)
-        //tree_insert(&root, tree_new(rand()));
+    for(i = 0; i < n; i++)
+        tree_insert(&root, tree_new(rand()));
 
     // Pior Caso - Ordem crescente ou decrescente e busca por n, fora do vetor
-    for(i = 0; i < n; i++)
-        tree_insert(&root, tree_new(i));
+    //for(i = 0; i < n; i++)
+        //tree_insert(&root, tree_new(i));
 
     
     clock_gettime(CLOCK_MONOTONIC, &b);
-    //search(root, rand()); // Melhor Caso
-    search(root, n); // Pior Caso
+    search(root, rand()); // Melhor Caso
+    //search(root, n); // Pior Caso
     clock_gettime(CLOCK_MONOTONIC, &a);
 
     t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);

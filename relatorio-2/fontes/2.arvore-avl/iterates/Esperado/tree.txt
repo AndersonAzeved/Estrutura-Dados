@@ -1,0 +1,9 @@
+100 437.798 0.875596 607 13071 500 iterates/Esperado/tree-500-100.txt
+200 479.564 0.959128 846 359 500 iterates/Esperado/tree-500-200.txt
+300 425.796 0.851592 688 297 500 iterates/Esperado/tree-500-300.txt
+400 479.87 0.95974 8742 324 500 iterates/Esperado/tree-500-400.txt
+500 572.81 1.14562 914 359 500 iterates/Esperado/tree-500-500.txt
+600 516.802 1.0336 972 1177 500 iterates/Esperado/tree-500-600.txt
+700 556.542 1.11308 978 1131 500 iterates/Esperado/tree-500-700.txt
+800 590.56 1.18112 991 378 500 iterates/Esperado/tree-500-800.txt
+900 651.71 1.30342 984 1000 500 iterates/Esperado/tree-500-900.txt
