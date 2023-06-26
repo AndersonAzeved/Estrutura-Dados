@@ -71,7 +71,6 @@ void tree_insert(struct tree_node **r, struct tree_node *w){ // Inserindo a dire
         (*r) = w;
     }else{
         w->parent = *r;
-        w->h = max(heightTree(w->lchild),heightTree(w->rchild)) + 1;
         if((*r)->value < w->value){
             tree_insert(&(*r)->rchild,w);
         }else{
