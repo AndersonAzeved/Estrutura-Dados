@@ -14,23 +14,23 @@ digraph G\n\
 
 #define DOT_FOOTER "}\n"
 
-struct list_node{
+typedef struct list_node{
     int value;
     struct list_node *next;
-};
+}NODE;
 
-struct hash{
-    struct list_node **t;
+typedef struct hash{
+    NODE **t;
     unsigned int m;
     unsigned int n;
-};
+}HASH;
 
-
-
-
-struct hash *inicia_hash(struct hash *t, int m);
-void liberar_hash(struct hash *t);
-int calc_resto(int value, int m);
-int inserir_SemColisão(struct hash *t, struct list_node *l);
-int busca_SemColisao(struct hash *t, int value, struct list_node *l);
-
+HASH *inicia_hash(HASH **h, int m);
+void list_insert(NODE **l, NODE *w);
+int f(int value, int m);
+void hash_insert(HASH **h, NODE *w);
+void rehash(HASH **h);
+NODE *node_new(int v);
+HASH *inicia_hash(HASH **h, int m);
+void liberar_hash(HASH **h);
+NODE *search(HASH *h, int value);

@@ -106,8 +106,4 @@ int main(int argc, char **argv){
     return 0;
 }
 
-
-
-
-
 //gcc -Wall tree.c; gcc tree.c -o tree; ./tree > tree.dot; dot -Tpng tree.dot -o tree.png
