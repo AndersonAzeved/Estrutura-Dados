@@ -133,12 +133,20 @@ int main(int argc, char **argv){
     srand(time(NULL));
 
     // Tempo esperado - Ordem e busca aleatória
+    // Tempo de Execução - Próximo a O(1): constante
     //for(i = 0; i < n; i++)
-        //hash_insert(&hash, node_new(rand()%100));
+        //hash_insert(&hash, node_new(rand()));
 
-    // Pior Caso - Ordem crescente ou decrescente e busca por n, fora do vetor
+    // Melhor Caso - Ordem crescente ou decrescente de um em um e busca por n, fora do vetor
+    // Tempo de Execução - O(1): constante
     for(i = 0; i < n; i++)
-        hash_insert(&hash, node_new(6));
+        hash_insert(&hash, node_new(i));
+
+    // Pior Caso - Todos os números iguais ou possue o mesmo resto
+    // Tempo de Execução - O(n)
+    for(i = 0; i < n; i++){
+        hash_insert(&hash, node_new(n-1));
+    }
 
     tree_print_dot(hash);
 
