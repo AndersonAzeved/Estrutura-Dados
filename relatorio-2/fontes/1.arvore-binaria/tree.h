@@ -7,7 +7,7 @@ digraph G\n\
   node\n\
   [\n\
     fontname=Monospace\n\
-    shape=record\n\
+    shape=Mrecord\n\
     style=filled\n\
     fillcolor=grey\n\
   ];\n"

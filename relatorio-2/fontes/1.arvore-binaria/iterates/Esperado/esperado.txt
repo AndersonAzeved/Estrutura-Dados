@@ -1,0 +1,9 @@
+100 152.5 0.305 312 123 500 iterates/Esperado/esperado-500-100.txt
+200 179.108 0.358216 306 146 500 iterates/Esperado/esperado-500-200.txt
+300 213.29 0.42658 333 140 500 iterates/Esperado/esperado-500-300.txt
+400 203.194 0.406388 287 163 500 iterates/Esperado/esperado-500-400.txt
+500 235.804 0.471608 354 143 500 iterates/Esperado/esperado-500-500.txt
+600 247.902 0.495804 471 181 500 iterates/Esperado/esperado-500-600.txt
+700 210.2 0.4204 361 161 500 iterates/Esperado/esperado-500-700.txt
+800 311.408 0.622816 428 259 500 iterates/Esperado/esperado-500-800.txt
+900 235.28 0.47056 367 184 500 iterates/Esperado/esperado-500-900.txt

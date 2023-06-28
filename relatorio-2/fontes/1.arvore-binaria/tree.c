@@ -75,35 +75,46 @@ struct tree_node *search(struct tree_node *r, int v){
 
 int main(int argc, char **argv){
     struct tree_node *root = NULL;
-    struct timespec a, b;
-    unsigned int t, n;
+    //struct timespec a, b;
+    //unsigned int t;
+    unsigned int n;
     int i, *v;
 
     n = atoi(argv[1]);
     v = (int *) malloc(n * sizeof(int));
     srand(time(NULL));
 
-    // Tempo esperado - Ordem e busca aleatória
+
+    /* Preenchendo a árvore */
+    /*------------------------------------------------------------------------------*/
+    // Tempo esperado - Ordem e busca aleatória 
+    // Tempo de Execução - O(logn)
     for(i = 0; i < n; i++)
-        tree_insert(&root, tree_new(rand()));
+        tree_insert(&root, tree_new(rand()%100));
 
     // Pior Caso - Ordem crescente ou decrescente e busca por n, fora do vetor
+    // Tempo de Execução - O(n)
     //for(i = 0; i < n; i++)
         //tree_insert(&root, tree_new(i));
+    /*----------------------------------------------------------------------------*/
 
-    
-    clock_gettime(CLOCK_MONOTONIC, &b);
-    search(root, rand()); // Melhor Caso
+
+    /* Calculando o tempo de execução */
+    /*-------------------------------------------------------------------*/
+    //clock_gettime(CLOCK_MONOTONIC, &b);
+    //search(root, rand()); // Melhor Caso
     //search(root, n); // Pior Caso
-    clock_gettime(CLOCK_MONOTONIC, &a);
+    //clock_gettime(CLOCK_MONOTONIC, &a);
+    //t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
+    //printf("%u\n", t);
+    /*-------------------------------------------------------------------*/
 
-    t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
-
-    printf("%u\n", t);
+    /* Criando o diagrama */
+    /*-------------------------------------------------------------------*/
+    tree_print_dot(root);
+    /*-------------------------------------------------------------------*/
 
     free(v);
 
     return 0;
 }
-
-//gcc -Wall tree.c; gcc tree.c -o tree; ./tree > tree.dot; dot -Tpng tree.dot -o tree.png
