@@ -171,18 +171,28 @@ int main(int argc, char **argv){
     v = (int *) malloc(n * sizeof(int));
     srand(time(NULL));
 
+    /* Preenchendo a árvore */
+    /*------------------------------------------------------------------------------*/
     // Tempo esperado - Ordem e busca aleatória
     // Tempo de Execução - Quase O(1): Quase constante
     for(i = 0; i < n; i++)
-        tree_insert(&root, tree_new(rand()));
+        tree_insert(&root, tree_new(rand()%100));
+    /*----------------------------------------------------------------------------*/
+
     
+    /* Calculando o tempo de execução */
+    /*-------------------------------------------------------------------*/
     clock_gettime(CLOCK_MONOTONIC, &b);
     search(root, rand()); // Melhor Caso
     clock_gettime(CLOCK_MONOTONIC, &a);
-
     t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
-
     printf("%u\n", t);
+    /*-------------------------------------------------------------------*/
+
+    /* Criando o diagrama */
+    /*-------------------------------------------------------------------*/
+    //tree_print_dot(root);
+    /*-------------------------------------------------------------------*/
 
     free(v);
 
