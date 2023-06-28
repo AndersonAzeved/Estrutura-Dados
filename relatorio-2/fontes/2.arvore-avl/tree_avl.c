@@ -5,7 +5,7 @@ int max(int a, int b){
     return (a > b)? a: b;
 }
 
-int heightTree(struct tree_node *w){
+int height_tree(struct tree_node *w){
     if(w == NULL)
         return -1;
     else    
@@ -14,12 +14,12 @@ int heightTree(struct tree_node *w){
 
 int cdiff(struct tree_node *w){
     if(w)
-        return(heightTree(w->lchild) - heightTree(w->rchild));
+        return(height_tree(w->lchild) - height_tree(w->rchild));
     else
         return 0;
 }
 
-struct tree_node *leftRotate(struct tree_node *x){
+struct tree_node *left_rotate(struct tree_node *x){
     struct tree_node *y, *z;
     y = (struct tree_node *) malloc(sizeof(struct tree_node));
     z = (struct tree_node *) malloc(sizeof(struct tree_node));
@@ -30,14 +30,14 @@ struct tree_node *leftRotate(struct tree_node *x){
     y->lchild = x;
     x->rchild = z;
 
-    x->h = max(heightTree(x->lchild),heightTree(x->rchild)) + 1;
-    y->h = max(heightTree(y->lchild),heightTree(y->rchild)) + 1;
+    x->h = max(height_tree(x->lchild),height_tree(x->rchild)) + 1;
+    y->h = max(height_tree(y->lchild),height_tree(y->rchild)) + 1;
 
     return y;
 
 }
 
-struct tree_node *rightRotate(struct tree_node *x){
+struct tree_node *right_rotate(struct tree_node *x){
     struct tree_node *y, *z;
     y = (struct tree_node *) malloc(sizeof(struct tree_node));
     z = (struct tree_node *) malloc(sizeof(struct tree_node));
@@ -48,21 +48,21 @@ struct tree_node *rightRotate(struct tree_node *x){
     y->rchild = x;
     x->lchild = z;
 
-    x->h = max(heightTree(x->lchild),heightTree(x->rchild)) + 1;
-    y->h = max(heightTree(y->lchild),heightTree(y->rchild)) + 1;
+    x->h = max(height_tree(x->lchild),height_tree(x->rchild)) + 1;
+    y->h = max(height_tree(y->lchild),height_tree(y->rchild)) + 1;
 
     return y;
 
 }
 
-struct tree_node *rightLeftRotate(struct tree_node *x){
-    x->rchild = rightRotate(x->rchild);
-    return leftRotate(x);
+struct tree_node *right_left_rotate(struct tree_node *x){
+    x->rchild = right_rotate(x->rchild);
+    return left_rotate(x);
 }
 
-struct tree_node *leftRightRotate(struct tree_node *x){
-    x->lchild = leftRotate(x->lchild);
-    return rightRotate(x);
+struct tree_node *left_right_rotate(struct tree_node *x){
+    x->lchild = left_rotate(x->lchild);
+    return right_rotate(x);
 }
 
 
@@ -71,7 +71,7 @@ void tree_insert(struct tree_node **r, struct tree_node *w){ // Inserindo a dire
         (*r) = w;
     }else{
         w->parent = *r;
-        //w->h = max(heightTree(w->lchild),heightTree(w->rchild)) + 1;
+        //w->h = max(height_tree(w->lchild),height_tree(w->rchild)) + 1;
         if((*r)->value < w->value){
             tree_insert(&(*r)->rchild,w);
         }else{
@@ -79,7 +79,7 @@ void tree_insert(struct tree_node **r, struct tree_node *w){ // Inserindo a dire
         }
     }
     
-    (*r)->h = max(heightTree((*r)->lchild),heightTree((*r)->rchild)) + 1;
+    (*r)->h = max(height_tree((*r)->lchild),height_tree((*r)->rchild)) + 1;
 
     (*r) = balance(*r);
     
@@ -89,16 +89,16 @@ struct tree_node *balance(struct tree_node *w){
     int c = cdiff(w);
 
     if(c < -1 && cdiff(w->rchild) <= 0)
-        w = leftRotate(w);
+        w = left_rotate(w);
     
     else if(c > 1 && cdiff(w->lchild) >= 0)
-        w = rightRotate(w);
+        w = right_rotate(w);
     
     else if(c > 1 && cdiff(w->lchild) < 0)
-        w = leftRightRotate(w);
+        w = left_right_rotate(w);
     
     else if(c < -1 && cdiff(w->rchild)> 0)
-        w = rightLeftRotate(w);
+        w = right_left_rotate(w);
     
     return w;
 }

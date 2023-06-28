@@ -96,36 +96,65 @@ NODE *search(HASH *h, int value){
     return NULL;
 }
 
+/////////// Implementar para  tabela HASH
+void tree_print_dot_body(HASH *h){
+    if(h != NULL){  
+        NODE *aux;
+        for(int i = 0; i < h->m; i++){
+            aux = h->t[i];
+            printf("  \"%d\" -> \"%d\"", i, i+1); 
+            while(aux != NULL){
+                printf("  \"%p\"[label=\"{{%d}|{%p}}\"]; ", aux, aux->value, aux->next);
+                printf("  \"%p\" -> \"%p\"", aux, aux->next);
+                aux = aux->next;
+            }
+        }
+    }
+}
+ 
+void tree_print_dot(HASH *h){
+    printf("%s", DOT_HEADER);
+    tree_print_dot_body(h);
+    printf("%s", DOT_FOOTER);
+}
 
-int main(int argc, char const *argv[]){
+
+////////////
+
+
+int main(int argc, char **argv){
     HASH *hash = inicia_hash(&hash, 1);
-    
+    struct timespec a, b;
+    unsigned int t, n;
+    int i, *v;
+
+    n = atoi(argv[1]);
+    v = (int *) malloc(n * sizeof(int));
     srand(time(NULL));
 
-    int n = 10;
+    // Tempo esperado - Ordem e busca aleatória
+    //for(i = 0; i < n; i++)
+        //hash_insert(&hash, node_new(rand()%100));
 
-    for(int i = 0; i < n; i++){
-        hash_insert(&hash, node_new(rand()));
-    }
+    // Pior Caso - Ordem crescente ou decrescente e busca por n, fora do vetor
+    for(i = 0; i < n; i++)
+        hash_insert(&hash, node_new(6));
 
-    NODE *aux;
-    for(int i = 0; i < hash->m; i++){
-        aux = hash->t[i];
-        printf("Posicao %d: ", i);
-        while(aux != NULL){
-            printf("%d -> ", aux->value);
-            aux = aux->next;
-        }
-        printf("\n");
-    }
+    tree_print_dot(hash);
 
-    NODE* res = search(hash, rand());
-    if(res)
-        printf("Achou %d\n",res->value);
-    else
-        printf("Não achou\n");
+    /*
+    clock_gettime(CLOCK_MONOTONIC, &b);
+    search(hash, rand()); // Melhor Caso
+    //search(hash, n);; // Pior Caso
+    clock_gettime(CLOCK_MONOTONIC, &a);
+
+    t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
+
+    printf("%u\n", t);*/
 
     liberar_hash(&hash);
+
+    free(v);
 
     return 0;
 }

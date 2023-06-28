@@ -4,6 +4,7 @@
 #define DOT_HEADER "\
 digraph G\n\
 {\n\
+  rankdir=LR\n\
   node\n\
   [\n\
     fontname=Monospace\n\

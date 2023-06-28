@@ -23,12 +23,12 @@ struct tree_node{
 };
 
 int max(int a, int b);
-int heightTree(struct tree_node *w);
+int height_tree(struct tree_node *w);
 int cdiff(struct tree_node *w);
-struct tree_node *leftRotate(struct tree_node *x);
-struct tree_node *rightRotate(struct tree_node *x);
-struct tree_node *rightLeftRotate(struct tree_node *x);
-struct tree_node *leftRightRotate(struct tree_node *x);
+struct tree_node *left_rotate(struct tree_node *x);
+struct tree_node *right_rotate(struct tree_node *x);
+struct tree_node *right_left_rotate(struct tree_node *x);
+struct tree_node *left_right_rotate(struct tree_node *x);
 void tree_insert(struct tree_node **r, struct tree_node *w);
 struct tree_node *balance(struct tree_node *w);
 struct tree_node *search(struct tree_node *r, int v);

@@ -1,5 +1,5 @@
 ../iterate.sh 100 100 100 900 ./tree_avl iterates/tree_avl
 
-gcc -Wall tree_avl.c; gcc tree_avl.c -o tree_avl; ./tree_avl 
+cc -Wall tree_avl.c -o tree_avl; ./tree_avl; ./tree_avl 
 
-gcc -Wall tree_avl.c; gcc tree_avl.c -o tree_avl; ./tree_avl > tree_avl.dot; dot -Tpng tree_avl.dot -o tree_avl.png
+cc -Wall tree_avl.c -o tree_avl; ./tree_avl > tree_avl.dot; dot -Tpng tree_avl.dot -o tree_avl.png

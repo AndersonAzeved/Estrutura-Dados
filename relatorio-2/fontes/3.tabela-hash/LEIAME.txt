@@ -1,0 +1,5 @@
+../iterate.sh 100 100 100 900 ./hash iterates/hash
+
+cc -Wall hash.c -o hash; ./hash 
+
+cc -Wall hash.c -o hash; ./hash  > hash.dot; dot -Tpng hash.dot -o hash.png
