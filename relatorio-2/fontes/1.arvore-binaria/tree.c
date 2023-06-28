@@ -90,7 +90,7 @@ int main(int argc, char **argv){
     // Tempo esperado - Ordem e busca aleatória 
     // Tempo de Execução - O(logn)
     for(i = 0; i < n; i++)
-        tree_insert(&root, tree_new(rand()%100));
+        tree_insert(&root, tree_new(rand()));
 
     // Pior Caso - Ordem crescente ou decrescente e busca por n, fora do vetor
     // Tempo de Execução - O(n)
@@ -111,7 +111,7 @@ int main(int argc, char **argv){
 
     /* Criando o diagrama */
     /*-------------------------------------------------------------------*/
-    tree_print_dot(root);
+    //tree_print_dot(root);
     /*-------------------------------------------------------------------*/
 
     free(v);
