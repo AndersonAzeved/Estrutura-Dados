@@ -148,7 +148,7 @@ int main(int argc, char **argv){
     // Pior Caso - Todos os números iguais ou possue o mesmo resto
     // Tempo de Execução - O(n)
     for(i = 0; i < n; i++)
-        hash_insert(&hash, node_new(i));
+        hash_insert(&hash, node_new(n));
 
     /*------------------------------------------------------------------------------*/
     
@@ -156,7 +156,7 @@ int main(int argc, char **argv){
     /* Calculando o tempo de execução */
     /*-------------------------------------------------------------------*/
     clock_gettime(CLOCK_MONOTONIC, &b);
-    search(hash, i*hash->m);
+    search(hash, n+hash->m);
     //search(hash, n);
     clock_gettime(CLOCK_MONOTONIC, &a);
     t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);

@@ -1,7 +1,4 @@
-
-
-
-../iterate.sh 100 100 100 900 ./tree iterates/tree
+../iterate.sh 500 100 100 900 ./tree iterates/tree
 
 cc -Wall tree.c -o tree; ./tree;
 

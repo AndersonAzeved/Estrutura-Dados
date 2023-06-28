@@ -75,8 +75,8 @@ struct tree_node *search(struct tree_node *r, int v){
 
 int main(int argc, char **argv){
     struct tree_node *root = NULL;
-    //struct timespec a, b;
-    //unsigned int t;
+    struct timespec a, b;
+    unsigned int t;
     unsigned int n;
     int i, *v;
 
@@ -89,21 +89,21 @@ int main(int argc, char **argv){
     /*------------------------------------------------------------------------------*/
     // Tempo esperado - Ordem e busca aleatória 
     // Tempo de Execução - O(logn)
-    for(i = 0; i < n; i++)
-        tree_insert(&root, tree_new(rand()));
+    //for(i = 0; i < n; i++)
+        //tree_insert(&root, tree_new(rand()));
 
     // Pior Caso - Ordem crescente ou decrescente e busca por n, fora do vetor
     // Tempo de Execução - O(n)
-    //for(i = 0; i < n; i++)
-        //tree_insert(&root, tree_new(i));
+    for(i = 0; i < n; i++)
+        tree_insert(&root, tree_new(i));
     /*----------------------------------------------------------------------------*/
 
 
     /* Calculando o tempo de execução */
     /*-------------------------------------------------------------------*/
     clock_gettime(CLOCK_MONOTONIC, &b);
-    search(root, rand()); // Tempo Esperado
-    //search(root, n); // Pior Caso
+    //search(root, rand()); // Tempo Esperado
+    search(root, n); // Pior Caso
     clock_gettime(CLOCK_MONOTONIC, &a);
     t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
     printf("%u\n", t);
