@@ -132,6 +132,9 @@ int main(int argc, char **argv){
     v = (int *) malloc(n * sizeof(int));
     srand(time(NULL));
 
+
+    /* Preenchendo a tabela hash */
+    /*------------------------------------------------------------------------------*/
     // Tempo esperado - Ordem e busca aleatória
     // Tempo de Execução - Próximo a O(1): constante
     //for(i = 0; i < n; i++)
@@ -139,26 +142,28 @@ int main(int argc, char **argv){
 
     // Melhor Caso - Ordem crescente ou decrescente de um em um e busca por n, fora do vetor
     // Tempo de Execução - O(1): constante
-    for(i = 0; i < n; i++)
-        hash_insert(&hash, node_new(i));
+    //for(i = 0; i < n; i++)
+        //hash_insert(&hash, node_new(i));
 
     // Pior Caso - Todos os números iguais ou possue o mesmo resto
     // Tempo de Execução - O(n)
-    for(i = 0; i < n; i++){
-        hash_insert(&hash, node_new(n-1));
-    }
+    for(i = 0; i < n; i++)
+        hash_insert(&hash, node_new(i));
 
-    tree_print_dot(hash);
+    /*------------------------------------------------------------------------------*/
+    
 
-    /*
+    /* Calculando o tempo de execução */
+    /*-------------------------------------------------------------------*/
     clock_gettime(CLOCK_MONOTONIC, &b);
-    search(hash, rand()); // Melhor Caso
-    //search(hash, n);; // Pior Caso
+    search(hash, i*hash->m);
+    //search(hash, n);
     clock_gettime(CLOCK_MONOTONIC, &a);
-
     t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
+    printf("%u\n", t);
+    /*-------------------------------------------------------------------*/
 
-    printf("%u\n", t);*/
+    //tree_print_dot(hash);
 
     liberar_hash(&hash);
 

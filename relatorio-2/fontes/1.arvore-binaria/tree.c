@@ -102,8 +102,8 @@ int main(int argc, char **argv){
     /* Calculando o tempo de execução */
     /*-------------------------------------------------------------------*/
     clock_gettime(CLOCK_MONOTONIC, &b);
-    search(root, rand()); // Melhor Caso
-    search(root, n); // Pior Caso
+    search(root, rand()); // Tempo Esperado
+    //search(root, n); // Pior Caso
     clock_gettime(CLOCK_MONOTONIC, &a);
     t = (a.tv_sec * 1e9 + a.tv_nsec) - (b.tv_sec * 1e9 + b.tv_nsec);
     printf("%u\n", t);

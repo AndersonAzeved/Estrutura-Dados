@@ -1,0 +1,9 @@
+100 78.504 0.157008 99 100 500 iterates/Melhor/melhor-500-100.txt
+200 80.438 0.160876 99 100 500 iterates/Melhor/melhor-500-200.txt
+300 72.308 0.144616 95 100 500 iterates/Melhor/melhor-500-300.txt
+400 70.998 0.141996 96 130 500 iterates/Melhor/melhor-500-400.txt
+500 70.55 0.1411 88 115 500 iterates/Melhor/melhor-500-500.txt
+600 66.136 0.132272 87 100 500 iterates/Melhor/melhor-500-600.txt
+700 69.046 0.138092 94 104 500 iterates/Melhor/melhor-500-700.txt
+800 69.826 0.139652 97 101 500 iterates/Melhor/melhor-500-800.txt
+900 77.296 0.154592 99 100 500 iterates/Melhor/melhor-500-900.txt
