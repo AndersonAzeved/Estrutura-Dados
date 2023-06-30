@@ -1,5 +1,9 @@
-../iterate.sh 100 100 100 900 ./hash iterates/hash
+Tabela de Dispersão (HASH)
 
-cc -Wall hash.c -o hash; ./hash 
+Comandos para terminal linux
 
-cc -Wall hash.c -o hash; ./hash  > hash.dot; dot -Tpng hash.dot -o hash.png
+Para executar o código, é necessário está na pasta "fontes" e digitar o comando abaixo
+cc -Wall hash.c -o hash; ./hash <VALOR>
+
+Para gerar o iterate, o comando abaixo
+../iterate.sh <EXECUÇÕES> <INÍCIO> <INCREMENTO> <FIM> ./hash iterates/hash

@@ -1,5 +1,12 @@
-../iterate.sh 100 100 100 900 ./tree_avl iterates/tree_avl
+Árvore Binária Balanceada (AVL)
 
-cc -Wall tree_avl.c -o tree_avl; ./tree_avl; ./tree_avl 
+Comandos para terminal linux
 
-cc -Wall tree_avl.c -o tree_avl; ./tree_avl > tree_avl.dot; dot -Tpng tree_avl.dot -o tree_avl.png
+Para executar o código, é necessário está na pasta "fontes" e digitar o comando abaixo
+cc -Wall tree_avl.c -o tree_avl; ./tree_avl; <VALOR>
+
+Para gerar o iterate, o comando abaixo
+../iterate.sh <EXECUÇÕES> <INÍCIO> <INCREMENTO> <FIM> ./tree_avl iterates/tree_avl
+
+Os diagramas utilizados no relatório, foram gerados com uma função disponibilizada e com a ferramenta graphviz, a partir do seguinte comando 
+cc -Wall tree_avl.c -o tree_avl; ./tree_avl <VALOR> > tree_avl.dot; dot -Tpng tree_avl.dot -o tree_avl.png

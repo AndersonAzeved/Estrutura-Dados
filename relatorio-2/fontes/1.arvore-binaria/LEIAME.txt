@@ -1,5 +1,12 @@
-../iterate.sh 500 100 100 900 ./tree iterates/tree
+Árvore Binária
 
-cc -Wall tree.c -o tree; ./tree;
+Comandos para terminal linux
 
-cc -Wall tree.c -o tree; ./tree > tree.dot; dot -Tpng tree.dot -o tree.png
+Para executar o código, é necessário está na pasta "fontes" e digitar o comando abaixo
+cc -Wall tree.c -o tree; ./tree; <VALOR>
+
+Para gerar o iterate, o comando abaixo
+../iterate.sh <EXECUÇÕES> <INÍCIO> <INCREMENTO> <FIM> ./tree iterates/tree
+
+Os diagramas utilizados no relatório, foram gerados com uma função disponibilizada e com a ferramenta graphviz, a partir do seguinte comando 
+cc -Wall tree.c -o tree; ./tree <VALOR> > tree.dot; dot -Tpng tree.dot -o tree.png
