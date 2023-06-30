@@ -176,7 +176,7 @@ int main(int argc, char **argv){
     // Tempo esperado - Ordem e busca aleatória
     // Tempo de Execução - Quase O(1): Quase constante, mas é O(logn)
     for(i = 0; i < n; i++)
-        tree_insert(&root, tree_new(rand()%100));
+        tree_insert(&root, tree_new(rand()));
     /*----------------------------------------------------------------------------*/
 
     
